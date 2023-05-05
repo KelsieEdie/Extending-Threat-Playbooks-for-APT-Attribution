@@ -19,10 +19,14 @@ we show that we can attribute attacks using a weighted Jaccard
 similarity with 96% accuracy.
 ## Contents
 * TTP_AAG.ipynb - contains the python notebook used to create the activity groups and generate the stix bundle of the activity attack graph.
-* TTP_Data.csv - final dataset compiled from both Categorized_Adversary_TTPs.csv and pyattck. 
-* Categorized_Adversary_TTPs.csv - This dataset is compiled from various cyber attacks. It contains metadata on the attacks and includes a list of ATT&CK T-codes: https://github.com/tropChaud/Categorized-Adversary-TTPs
-* AbstractRules.csv - a CSV file of the abstract rules extracted from the dataset after replacing all sub-techniques with their parent technique. 
-* SpecificRules - a CSV file of the specific rules extracted from the dataset. These rules have a combination of both techniques and sub-techniques. 
+* datasets/Categorized_Adversary_TTPs.csv - This dataset is compiled from various cyber attacks and is used as a test dataset to evaluate our APT attribution algorithm. It contains metadata on the attacks and includes a list of ATT&CK T-codes: https://github.com/tropChaud/Categorized-Adversary-TTPs
+* datasets/AbstractRules.csv - a CSV file of the abstract rules extracted from the dataset after replacing all sub-techniques with their parent technique. 
+* datasets/SpecificRules.csv - a CSV file of the specific rules extracted from the dataset. These rules have a combination of both techniques and sub-techniques. 
+* datasets/ThreatProfiles/threat_profiles.json - a json file contianing threat playbooks consisting of TTPs on each APT group in the MITRE ATT&CK Framework. 
+* datasets/ThreatProfiles/extended_threat_profiles.json - a json file contianing extended threat playbooks on APT groups generated using our AAG generation algorithm 
+on standard threat playbooks. 
+* datasets/ThreatProfiles/test_profiles.json - a json file contianing threat extended playbooks for each observation in the test dataset.
+* datasets/ThreatProfiles/TidalCyberData - two datasets provided by TidayCyber (https://www.tidalcyber.com/) containing information on cyber attacks to include MITRE ATT&CK techniques.
 ## Bibtex Citation
 ```
 @inproceedings{edie_mckee_attribution_2023,
